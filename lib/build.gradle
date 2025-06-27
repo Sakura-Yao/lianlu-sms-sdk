@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
+    id 'signing'
 }
 
 repositories {
@@ -45,25 +46,32 @@ jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
+tasks.register('sourcesJar', Jar) {
+    from sourceSets.main.allJava
+    archiveClassifier.set('sources')
+}
+
+tasks.register('javadocJar', Jar) {
+    from javadoc
+    archiveClassifier.set('javadoc')
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
             from components.java
             groupId = 'com.dmo'
             artifactId = 'lianlu-sms-sdk'
-            version = '1.0.0-SNAPSHOT'
+            version = '1.0.0'
         }
     }
 
     repositories {
-        maven {
-            url 'http://dev.dmoba.com:38081/repository/maven-snapshots/'
-            allowInsecureProtocol true
-            credentials {
-                username "admin"
-                password '1q2w#E$R'
-            }
-            allowInsecureProtocol = true
-        }
+
     }
 }
