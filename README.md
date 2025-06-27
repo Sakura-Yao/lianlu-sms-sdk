@@ -23,7 +23,7 @@ Once published to Maven Central:
 
 ```xml
 <dependency>
-  <groupId>com.dmo</groupId>
+  <groupId>com.ninghua-itc.nexus</groupId>
   <artifactId>lianlu-sms-sdk</artifactId>
   <version>1.0.0</version>
 </dependency>
