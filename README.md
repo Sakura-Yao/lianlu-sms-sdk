@@ -1,6 +1,6 @@
 # LianLu SMS SDK
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.ninghua-itc.nexus/lianlu-sms-sdk.svg)](https://search.maven.org/artifact/com.dmo/lianlu-sms-sdk)
+[![Maven Central](https://img.shields.io/maven-central/v/com.ninghua-itc.nexus/lianlu-sms-sdk.svg)](https://search.maven.org/artifact/com.ninghua-itc.nexus/lianlu-sms-sdk)
 
 Java SDK for sending SMS messages via the LianLu SMS platform.
 
